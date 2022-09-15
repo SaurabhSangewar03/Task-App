@@ -1,0 +1,34 @@
+<% for(var i = 0; i < tasks.length; i++) { %>
+  <tr>
+    <td class="styling"><%= tasks[i].description %></td>
+
+    <!-- inline styling for different category -->
+    <% if(tasks[i].category == "Personal") { %>
+      <td class="styling" style="background-color: #4B89BF; color: aliceblue;"><%= tasks[i].category %></td>
+    <% } %>
+
+    <% if(tasks[i].category == "Office") { %>
+      <td class="styling" style="background-color: #71C750; color: aliceblue;"><%= tasks[i].category %></td>
+    <% } %>
+
+    <% if(tasks[i].category == "Home") { %>
+      <td class="styling" style="background-color: #FA1AF1; color: midnightblue;"><%= tasks[i].category %></td>
+    <% } %>
+
+    <% if(tasks[i].category == "Cleaning") { %>
+      <td class="styling" style="background-color: #F2B544; color: darkslateblue;"><%= tasks[i].category %></td>
+    <% } %>
+
+    <% if(tasks[i].category == "Other") { %>
+      <td class="styling" style="background-color: #D97218; color: lightgray;"><%= tasks[i].category %></td>
+    <% } %>
+    
+
+    <td class="styling"><%= tasks[i].dueDate %></td>
+    <td class="styling">
+      <a class="btn border-shadow delete" data-id=<%= tasks[i]._id %>>
+        <span class="text-gradient"><i class="fa-solid fa-trash-can"></i></span>
+      </a>  
+    </td>
+  </tr>
+<% } %>

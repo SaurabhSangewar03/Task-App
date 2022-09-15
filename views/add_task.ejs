@@ -1,0 +1,51 @@
+<form action="/api/task" class="form-1" method="POST" id="add_task">
+  <!-- 'Description' container-->
+  <!-- <div id="description-container">
+      <p>DESCRIPTION :-</p><br>
+      <input id="form-description" type="text" name="description" placeholder="What to do today?" required>
+  </div> -->
+
+  <!-- Here we give input For Task-Description -->
+  <p>Description :- </p>
+  <div class="input-group mb-3">
+    
+    
+    <input id="form-description type="text" class="form-control" name="description" placeholder="Assign A Task Please Type Here...!" required>
+  </div>
+
+  <!-- 'Category' and 'Due Date or deadline' container-->
+  <div class="category-date-container">
+      <!-- 'Category' container -->
+      <div id="category-container">
+          <p id="category-heading">CATEGORY</p><br>
+          <!-- Category Drop-down -->
+          <select class="form-select" name="category" aria-label="Default select example">
+            <option selected>Choose Category</option>
+            <option value="Personal">Personal</option>
+            <option value="Office">Office</option>
+            <option value="Home">Home</option>
+            <option value="Cleaning">Cleaning</option>
+            <option value="Other">Other</option>
+          </select>
+      </div>
+      <!-- 'Due Date' container -->
+      <div id="due-date-container">
+          <p class="deadline">DEADLINE</p><br>
+          <input id="date-input-box" class="date-picker" type="date" name="dueDate" placeholder="">
+      </div>
+  </div>
+  <!-- 'Add' Button-->
+  <div class="buttons-container">
+      <!-- Add Button -->
+      <div> 
+          <button type="submit" onclick="notification('success')" class="add-button">
+            <i class="fa-solid fa-circle-plus"></i>
+              &nbsp; ADD TASK
+          </button>
+      </div>
+      &nbsp;
+      
+
+  </div>
+  
+</form>

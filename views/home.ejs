@@ -1,0 +1,36 @@
+<!-- include header -->
+<%- include('include/_header') %>
+
+<!-- include header end -->
+
+<main id="site-main">
+  <div class="container">
+    <!-- Add Task form -->
+    <%- include('add_task') %>
+
+    
+    <form action="/" class="form-2" method="POST">
+      <table class="table">
+          <thead class="thead-dark">
+              <tr>
+                  <th class="fixed-width-1">TASK</th>
+                  <th class="fixed-width-2">CATEGORY</th>
+                  <th><i class="fa-solid fa-calendar" style="margin: 0px 3px;"></i>DEADLINE</th>
+                  <th>DELETE</th>
+                  
+              </tr>
+          </thead>
+          <tbody>
+            <!-- This is for showing Added Task -->
+            <%- include('include/_show') %>
+          </tbody>
+      </table>
+  </form>
+  </div>
+</main>
+
+<!-- include footer -->
+<%- include('include/_footer') %>
+
+<!-- include footer end -->
+  
